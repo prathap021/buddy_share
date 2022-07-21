@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:buddy_share/sliverappbar/flexibleappbar.dart';
+import 'package:buddy_share/sliverappbar/themes.dart';
 import 'package:flutter/material.dart';
 
 class Buddyshare extends StatefulWidget {
@@ -30,6 +31,11 @@ class _BuddyshareState extends State<Buddyshare> {
                     fontSize: 30),
               ),
               actions: [
+                IconButton(
+                    onPressed: () {
+                      ThemeService().changeThemeMode();
+                    },
+                    icon: Icon(Icons.light_rounded)),
                 IconButton(onPressed: () {}, icon: Icon(Icons.more_vert))
               ],
               pinned: true,
